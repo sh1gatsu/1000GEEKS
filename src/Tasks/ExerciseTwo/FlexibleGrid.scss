@@ -1,0 +1,38 @@
+$block-size: 150px;
+
+.parrent {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+
+  @media (min-width: 360px) {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(4, 25%);
+  }
+
+  &__children {
+    height: $block-size;
+    text-align: center;
+    line-height: $block-size;
+    border: 1px solid black;
+    color: white;
+
+    &--1 {
+      background-color: rgb(40%, 0%, 0%),;
+    }
+
+    &--2 {
+      background-color: rgb(60%, 0%, 0%),;
+    }
+
+    &--3 {
+      background-color: rgb(80%, 0%, 0%),;
+    }
+
+    &--4 {
+      background-color: rgb(100%, 0%, 0%),;
+    }
+  }
+}
